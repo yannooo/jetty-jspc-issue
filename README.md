@@ -1,5 +1,5 @@
 # JSPC issue with jetty 9.2
-This is a sample project whos purpose is to demonstate an issue when trying to compile a jsp with a taglibs in jetty 9.2 series
+This is a sample project whose purpose is to demonstate an issue when trying to compile a jsp with a taglibs in jetty 9.2 series
 
 I have a simple webapp with a single jsp index.jsp that use two taglibs
 ```java
