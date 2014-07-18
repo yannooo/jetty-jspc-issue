@@ -22,6 +22,11 @@
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>${jettyVersion}</version>
+                <configuration>
+                    <webApp>
+                        <containerIncludeJarPattern>.*/javax.servlet-[^/]*\.jar$|.*/servlet-api-[^/]*\.jar$|.*javax.servlet.jsp.jstl-[^/]*\.jar|.*taglibs-standard-impl-.*\.jar</containerIncludeJarPattern>
+                    </webApp>
+                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -52,7 +57,7 @@
                         <artifactId>maven-war-plugin</artifactId>
                         <configuration>
                             <webXml>${basedir}/target/web.xml</webXml>
-			    <excludes>**/*.jsp</excludes>
+                            <excludes>**/*.jsp</excludes>
                         </configuration>
                     </plugin>
                 </plugins>
